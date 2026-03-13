@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Urban Langot – Dark Header / White Body / Orange Accents */
+    --background: 0.97 0.005 60;
+    --foreground: 0.15 0.01 250;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.01 250;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.01 250;
+    --primary: 0.73 0.18 60;
+    --primary-foreground: 0.15 0.01 250;
+    --secondary: 0.93 0.01 60;
+    --secondary-foreground: 0.15 0.01 250;
+    --muted: 0.93 0.005 60;
+    --muted-foreground: 0.5 0.01 250;
+    --accent: 0.73 0.18 60;
+    --accent-foreground: 0.12 0.01 250;
+    --destructive: 0.45 0.2 30;
+    --destructive-foreground: 1 0 0;
+    --border: 0.88 0.01 60;
+    --input: 0.88 0.01 60;
+    --ring: 0.73 0.18 60;
+    --radius: 0.5rem;
+    --header-bg: 0.18 0.01 250;
+    --header-fg: 0.97 0.005 60;
+    --orange: 0.73 0.18 60;
+    --price-red: 0.45 0.2 30;
+    --chart-1: 0.73 0.18 60;
+    --chart-2: 0.55 0.15 30;
+    --chart-3: 0.65 0.12 200;
+    --chart-4: 0.75 0.1 140;
+    --chart-5: 0.6 0.08 280;
+    --sidebar: 0.18 0.01 250;
+    --sidebar-foreground: 0.97 0.005 60;
+    --sidebar-primary: 0.73 0.18 60;
+    --sidebar-primary-foreground: 0.15 0.01 250;
+    --sidebar-accent: 0.25 0.01 250;
+    --sidebar-accent-foreground: 0.97 0.005 60;
+    --sidebar-border: 0.28 0.01 250;
+    --sidebar-ring: 0.73 0.18 60;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+}
+
+/* Custom animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease both;
+}
